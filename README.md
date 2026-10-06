@@ -30,20 +30,22 @@ cp -R "AI Sleep.app" /Applications/
 
 ## No-password toggling (recommended)
 
-`pmset` needs root. Without setup, every toggle shows a password prompt. Run once:
+`pmset` needs root. Without setup, every toggle shows a password prompt.
 
-```bash
-./nopasswd.sh
-```
+Open the menu → **Toggle without password**, and confirm with your admin password once. The checkmark shows whether it's active; clicking again removes it.
 
-It installs `/etc/sudoers.d/aimode` allowing exactly two commands without a password:
+If you prefer the terminal (e.g. before first launch), `./nopasswd.sh` does the same thing.
+
+Either way it installs `/etc/sudoers.d/aimode`, allowing exactly two commands without a password:
 
 ```
 pmset -a disablesleep 1
 pmset -a disablesleep 0
 ```
 
-Nothing else. To undo: `sudo rm /etc/sudoers.d/aimode`.
+Nothing else, and the rule is validated with `visudo -c` before it is kept — a malformed rule is discarded instead of breaking `sudo` on your machine.
+
+To undo: untick the menu item, or `sudo rm /etc/sudoers.d/aimode`.
 
 ## Start at login
 
