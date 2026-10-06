@@ -22,7 +22,7 @@ First launch: the app is signed with an ad-hoc signature, so macOS will warn abo
 **From source** — requires Xcode Command Line Tools (`xcode-select --install`):
 
 ```bash
-git clone https://github.com/USER/sleep-mac-ai.git
+git clone https://github.com/ilnarisakov/sleep-mac-ai.git
 cd sleep-mac-ai
 ./build.sh                 # builds "AI Sleep.app"
 cp -R "AI Sleep.app" /Applications/

@@ -22,7 +22,7 @@
 **Из исходников** — нужны Xcode Command Line Tools (`xcode-select --install`):
 
 ```bash
-git clone https://github.com/USER/sleep-mac-ai.git
+git clone https://github.com/ilnarisakov/sleep-mac-ai.git
 cd sleep-mac-ai
 ./build.sh                 # собирает «AI Sleep.app»
 cp -R "AI Sleep.app" /Applications/
